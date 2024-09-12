@@ -37,7 +37,7 @@ console.log(`The odd numbers you gave are ${getOdds(numbers)}.`);
  * @returns {number} the length of the array
  */
 function getLength(numbers) {
-  // TODO
+  return numbers.length;
 }
 
 /**
@@ -45,7 +45,11 @@ function getLength(numbers) {
  * @returns {number} the sum of the numbers
  */
 function getSum(numbers) {
-  // TODO
+  let sum = 0
+  for (const n of numbers) {
+    sum += n;
+  }
+  return sum;
 }
 
 /**
@@ -53,15 +57,25 @@ function getSum(numbers) {
  * @returns {number} the mean of the numbers
  */
 function getMean(numbers) {
-  // TODO
-}
+  let sum = 0;
+  for (const n of numbers) {
+    sum += n;
+    const average = sum / numbers.length;
+    return average;
+  }
 
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the smallest of the numbers
  */
 function getMin(numbers) {
-  // TODO
+  let min = Infinity;
+  for (const n of numbers) {
+    if (n < min) {
+      min = n;
+    }
+  }
+  return min;
 }
 
 /**
